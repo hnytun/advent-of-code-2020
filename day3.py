@@ -1,7 +1,4 @@
 
-
-
-
 def CheckTrees(map,x,y):
     currentx=0
     tree=0
