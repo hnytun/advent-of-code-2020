@@ -2,8 +2,6 @@
 amtvalid=0
 amtvalid2=0
 for line in open("input_day2.txt","r").read().split('\n'):
-    if(line==''):
-        break
     minmax=line.split(' ')[0]
     min=int(minmax.split('-')[0])
     max=int(minmax.split('-')[1])

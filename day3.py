@@ -3,8 +3,6 @@ def CheckTrees(map,x,y):
     currentx=0
     tree=0
     for area in map[0::y]:
-        if(len(area)==0): #consider last line, always blank ??
-            break
         if(currentx>=len(area)):
             currentx=currentx%len(area) #if we hit the edge, we wrap around cause repeating patterns yo
         if(area[currentx] == '#'):

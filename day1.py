@@ -1,7 +1,6 @@
 
 
 numbers = open("input_day1.txt","r").read().split('\n')
-numbers.pop() #removes whitespace parsed as element of the list
 index=0
 for num in numbers:
     for otherNum in numbers[index+1:]:
