@@ -18,7 +18,6 @@ def CheckTrees(map,x,y):
 map = open("input_day3.txt","r").read().split('\n')
 
 slopes=[(1,1),(3,1),(5,1),(7,1),(1,2)]
-
 sum=1
 for slope in slopes:
     sum*=CheckTrees(map,slope[0],slope[1])
