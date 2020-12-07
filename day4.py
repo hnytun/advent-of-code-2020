@@ -8,7 +8,7 @@ def FieldsPresent(fields):
     if(len(fields) == 8):
         return True
     elif(len(fields) < 7):
-        return False;    
+        return False;
     elif(len(fields) == 7):
         cidMissing=True
         for field in fields:
@@ -47,7 +47,7 @@ def FieldsValid(fields):
                     #print("hgt cant be: ", split[1].split('i')[0], "in")
                     return False
         if(split[0] == "hcl"):
-             pattern = re.compile("[a-f0-9]+")
+             pattern = re.compile("[a-f\d]+")
              if(not(split[1][0] == '#' and len(split[1])==7 and pattern.fullmatch(split[1][1:]) is not None)):
                 #print("hcl cant be: ", split[1])
                 return False
