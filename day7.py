@@ -26,40 +26,20 @@ def producemap(input):
     return containerMaps
 
 """
+
 gets all containers that has a specific type of bag in them
 """
 
 
-
-
 map = producemap(input_sample)
-
-print("---------------------------------------------------------------------")
-for p in map:
-    print(p,map[p])
-print("---------------------------------------------------------------------")
-
-
-def findTarget(target,line,globalmap):
-
-    if(globalmap[line]=={}):
-        print("empty")
-        return 0
-    if(target in globalmap[line]):
-        print("found it directly in", line)
-        return 1
-    else:
-        for deeperline in globalmap[line]:
-            print("looking deeper into ",deeperline)
-            return findTarget(target,deeperline,map)
+map_sample = producemap(input)
 
 
 
-for m in map:
-    findTarget("shiny gold bags",m,map)
-
-
-
+for bag in map_sample.items():
+    print(bag)
+    for childBag in bag[1]:
+        print(childBag)
 
 
 
