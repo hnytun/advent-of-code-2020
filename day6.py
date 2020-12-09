@@ -1,7 +1,6 @@
 
 from collections import Counter
 
-
 answers = open("input_day6.txt","r").read().split("\n\n")
 sum=0
 everybody=0
